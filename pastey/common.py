@@ -104,4 +104,4 @@ def build_url(request, path="/"):
 
 # Generate unique_id (generates a 6 digit id instead of 32 for readability and easier memorization)
 def id_generator(size=6, chars=ascii_uppercase + digits + ascii_lowercase ):
-    return ''.join(random.SystemRandom().choice(chars) for _ in range(size))
+    return ''.join(SystemRandom().choice(chars) for _ in range(size))
