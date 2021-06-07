@@ -188,6 +188,26 @@ def paste_json():
             "link": common.build_url(request, "/view/" + unique_id)
         }, 200
 
+# GET paste content (cli compatability)
+@app.route('/content', methods = ['GET'])
+@limiter.limit(config.rate_limit, exempt_when=lambda: common.verify_whitelist(common.get_source_ip(request)))
+def get_paste():
+    source_ip = common.get_source_ip(request)
+    
+    # Check if restrict pasting to whitelist CIDRs is enabled
+    if config.restrict_get and not common.verify_whitelist(source_ip):
+        abort(401)
+
+    request_path = request.path
+    unique_id = request_path.split('/')[-1]
+
+    paste_file = config.data_directory + "/" + unique_id
+    if path.exists(paste_file):
+        paste = json.loads(paste_file)
+        return paste["content"], 200
+    else:
+        abort(400)
+
 # Custom 404 handler
 @app.errorhandler(404)
 def page_not_found(e):

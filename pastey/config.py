@@ -21,6 +21,9 @@ blacklist_cidr = []
 # Restrict pasting functionality to whitelisted IPs
 restrict_pasting = False
 
+# Restrict GET requests from whitelisted IPs
+restrict_get = False
+
 # Rate limit for pasting (ignored for whitelisted users)
 rate_limit = "5/hour"
 

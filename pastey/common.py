@@ -4,6 +4,8 @@ import ipaddress
 from os import path
 from pathlib import Path
 from datetime import datetime, timedelta
+from string import ascii_lowercase, ascii_uppercase, digits
+from random import SystemRandom
 
 ########## Common functions ##########
 
@@ -99,3 +101,7 @@ def build_url(request, path="/"):
         protocol = request.url.split('//')[0] if not config.force_https_links else "https:"
 
     return protocol + "//" + domain + path
+
+# Generate unique_id (generates a 6 digit id instead of 32 for readability and easier memorization)
+def id_generator(size=6, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase ):
+    return ''.join(random.SystemRandom().choice(chars) for _ in range(size))

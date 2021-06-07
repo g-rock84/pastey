@@ -6,7 +6,6 @@ from pathlib import Path
 from datetime import datetime, timedelta
 from cryptography.fernet import Fernet
 import time
-import uuid
 import json
 
 ########## Paste functions ##########
@@ -80,12 +79,12 @@ def delete_paste(unique_id):
 
 # Create new paste
 def new_paste(title, content, source_ip, expires=0, single=False, encrypt=False):
-    unique_id = str(uuid.uuid4())
+    unique_id = str(id_generator())
     output_file = config.data_directory + "/" + unique_id
 
     # Check for existing paste id (unlikely)
     while path.exists(output_file) or path.exists(output_file + ".expires"):
-        unique_id = str(uuid.uuid4())
+        unique_id = str(id_generator())
         output_file = config.data_directory + "/" + unique_id
 
     # Attempt to guess programming language
