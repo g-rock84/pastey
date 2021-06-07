@@ -200,7 +200,9 @@ def get_paste():
 
     request_path = request.path
     unique_id = request_path.split('/')[-1]
+    return unique_id
 
+    """
     paste_file = config.data_directory + "/" + unique_id
     if path.exists(paste_file):
         paste = json.loads(paste_file)
@@ -208,6 +210,7 @@ def get_paste():
         return make_response(paste["content"], 200, headers=headers)
     else:
         abort(400)
+    """
 
     
     
