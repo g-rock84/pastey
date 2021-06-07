@@ -204,9 +204,13 @@ def get_paste():
     paste_file = config.data_directory + "/" + unique_id
     if path.exists(paste_file):
         paste = json.loads(paste_file)
-        return paste['content'], 200
+        headers = {"Content-Type": "text/plain","Accept":"text/plain"}
+        return make_response(paste["content"], 200, headers=headers)
     else:
         abort(400)
+
+    
+    
 
 # Custom 404 handler
 @app.errorhandler(404)
