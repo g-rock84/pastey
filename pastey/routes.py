@@ -189,11 +189,12 @@ def paste_json():
         }, 200
 
 # GET paste content (cli compatability)
-@app.route('/content')
+@app.route('/content/<unique_id>', methods = ['GET'])
 @limiter.limit(config.rate_limit, exempt_when=lambda: common.verify_whitelist(common.get_source_ip(request)))
 def get_paste():
     source_ip = common.get_source_ip(request)
     return source_ip
+
     """
     
     # Check if restrict pasting to whitelist CIDRs is enabled
