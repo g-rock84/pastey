@@ -79,7 +79,7 @@ def delete_paste(unique_id):
 
 # Create new paste
 def new_paste(title, content, source_ip, expires=0, single=False, encrypt=False):
-    unique_id = str(id_generator())
+    unique_id = str(common.id_generator())
     output_file = config.data_directory + "/" + unique_id
 
     # Check for existing paste id (unlikely)
