@@ -200,7 +200,8 @@ def get_paste(unique_id):
 
     paste_file = config.data_directory + "/" + unique_id
     if path.exists(paste_file):
-        paste = json.loads(paste_file)
+        with open(paste_file, 'r') as f:
+            paste = json.loads(f.read())
         return paste["content"]
     else:
         abort(400)
