@@ -202,7 +202,7 @@ def get_paste(unique_id):
     if path.exists(paste_file):
         with open(paste_file, 'r') as f:
             paste = json.loads(f.read())
-        return paste["content"]
+        return paste["content"], 200
     else:
         abort(400)
 
