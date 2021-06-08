@@ -4,7 +4,7 @@ from . import config, common, functions
 from flask import Flask, render_template, request, redirect, abort
 from urllib.parse import quote
 from datetime import datetime
-from os import environ
+from os import environ, path
 import json
 
 # Load themes
@@ -199,7 +199,7 @@ def get_paste(unique_id):
         abort(401)
 
     paste_file = config.data_directory + "/" + unique_id
-    if path.exists(paste_file):
+    if exists(paste_file):
         paste = json.loads(paste_file)
         return paste["content"]
     else:
