@@ -193,26 +193,17 @@ def paste_json():
 @limiter.limit(config.rate_limit, exempt_when=lambda: common.verify_whitelist(common.get_source_ip(request)))
 def get_paste(unique_id):
     source_ip = common.get_source_ip(request)
-    return source_ip
-
-    """
     
     # Check if restrict pasting to whitelist CIDRs is enabled
     if config.restrict_get and not common.verify_whitelist(source_ip):
         abort(401)
 
-    request_path = request.path
-    unique_id = request_path.split('/')[-1]
-    return unique_id
-
     paste_file = config.data_directory + "/" + unique_id
     if path.exists(paste_file):
         paste = json.loads(paste_file)
-        headers = {"Content-Type": "text/plain","Accept":"text/plain"}
-        return make_response(paste["content"], 200, headers=headers)
+        return paste["content"]
     else:
         abort(400)
-    """
 
 
 # Custom 404 handler
