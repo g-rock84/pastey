@@ -199,7 +199,7 @@ def get_paste(unique_id):
         abort(401)
 
     paste_file = config.data_directory + "/" + unique_id
-    if exists(paste_file):
+    if path.exists(paste_file):
         paste = json.loads(paste_file)
         return paste["content"]
     else:
