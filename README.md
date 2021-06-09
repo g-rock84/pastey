@@ -56,9 +56,8 @@ hello!
 ```
 ```
 grock84@server:~$ curl https://pastey.example.com/view/ThIu42
-[ 77562.899]
-blah blah
-log junk
+[ 77562.899] blah blah
+[ 77562.943] log junk
 ```
 
 # Installation
