@@ -16,6 +16,11 @@ A lightweight, self-hosted paste platform
 * Fully configurable via environment variables
 * Included script for uploading files/content from stdin
 
+### Custom Features
+* Shortened paste ID string from 32 characters to 6 for cli friendliness
+* Added ability to retrieve pastes from command line (i.e. using curl)
+
+(These features were added by me and not Cesura. All issues regarding them should be directed to myself.)
 
 ## Screenshots
 ### Browser
@@ -26,6 +31,12 @@ A lightweight, self-hosted paste platform
 ![dark](https://i.imgur.com/SXeSa5d.png)
 ### CLI
 ![screenshot5](https://i.imgur.com/FFWGe43.png)
+
+#### GET request
+```
+grock84@server:~$ curl https://pastey.example.com/content/oy0aV3
+hello!
+```
 
 # Installation
 ### Docker
