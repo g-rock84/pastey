@@ -35,27 +35,27 @@ If he chooses to incorporate these features into the main repo, I will delete th
 #### Add paste
 First install the [pastey](https://github.com/Cesura/pastey/blob/main/templates/pastey.sh) script:
 ```
-grock84@server:~$ curl https://pastey.example.com/pastey > pastey
+grock84@server:~$ curl https://pastey.mydomain.me/pastey > pastey
 grock84@server:~$ chmod +x pastey
-grock84@server:~$ echo 'export PATH="$PATH":/place/with/script/' >> ~/.bashrc
+grock84@server:~$ echo 'export PATH="$PATH":/dir/to/script/' >> ~/.bashrc
 ```
 Then:
 ```
 grock84@server:~$ echo "hello!" | pastey
-https://pastey.example.com/view/oy0aV3
+https://pastey.mydomain.me/view/oy0aV3
 ```
 ```
 grock84@server:~$ cat /var/log/Xorg.0.log | pastey
-https://pastey.example.com/view/ThIu42
+https://pastey.mydomain.me/view/ThIu42
 ```
 #### Retrieve paste
 Simply change '/view/' to '/content/' and `curl` away!
 ```
-grock84@server:~$ curl https://pastey.example.com/content/oy0aV3
+grock84@server:~$ curl https://pastey.mydomain.me/content/oy0aV3
 hello!
 ```
 ```
-grock84@server:~$ curl https://pastey.example.com/content/ThIu42
+grock84@server:~$ curl https://pastey.mydomain.me/content/ThIu42
 [ 77562.899] blah blah
 [ 77562.943] log junk
 ```
