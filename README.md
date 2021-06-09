@@ -32,7 +32,10 @@ A lightweight, self-hosted paste platform
 ### CLI
 
 #### Add paste
-![screenshot5](https://i.imgur.com/FFWGe43.png)
+```
+grock84@server:~$ echo "hello!" | pastey
+https://pastey.example.com/view/oy0aV3
+```
 
 #### Retrieve paste
 ```
