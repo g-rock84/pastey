@@ -38,6 +38,7 @@ https://pastey.example.com/view/oy0aV3
 ```
 
 #### Retrieve paste
+Simply change '/view/' to '/content/' and `curl` away!
 ```
 grock84@server:~$ curl https://pastey.example.com/content/oy0aV3
 hello!
