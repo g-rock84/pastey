@@ -55,7 +55,7 @@ grock84@server:~$ curl https://pastey.example.com/content/oy0aV3
 hello!
 ```
 ```
-grock84@server:~$ curl https://pastey.example.com/view/ThIu42
+grock84@server:~$ curl https://pastey.example.com/content/ThIu42
 [ 77562.899] blah blah
 [ 77562.943] log junk
 ```
