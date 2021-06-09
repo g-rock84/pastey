@@ -37,7 +37,7 @@ First install the [pastey](https://github.com/Cesura/pastey/blob/main/templates/
 ```
 grock84@server:~$ curl https://pastey.example.com/pastey > pastey
 grock84@server:~$ chmod +x pastey
-grock84@server:~$ export PATH=$PATH:~/pastey
+grock84@server:~$ echo 'export PATH="$PATH":/place/with/script/' >> ~/.bashrc
 ```
 Then:
 ```
