@@ -30,9 +30,11 @@ A lightweight, self-hosted paste platform
 ### Dark
 ![dark](https://i.imgur.com/SXeSa5d.png)
 ### CLI
+
+#### Add paste
 ![screenshot5](https://i.imgur.com/FFWGe43.png)
 
-#### GET request
+#### Retrieve paste
 ```
 grock84@server:~$ curl https://pastey.example.com/content/oy0aV3
 hello!
