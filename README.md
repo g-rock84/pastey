@@ -21,7 +21,7 @@ A lightweight, self-hosted paste platform
 * Added ability to retrieve pastes from command line (i.e. using curl)
 
 **Note:** These custom features were added by me and not [Cesura](https://github.com/Cesura/pastey) (Developer/Author). All issues regarding them should be directed to myself.
-If he chooses to incorporate these features into the main repo, I will delete this repo and re-fork.
+If he chooses to incorporate these features into the main repo, I will delete this and re-fork.
 
 ## Screenshots
 ### Browser
