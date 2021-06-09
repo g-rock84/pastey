@@ -20,7 +20,8 @@ A lightweight, self-hosted paste platform
 * Shortened paste ID string from 32 characters to 6 for cli friendliness
 * Added ability to retrieve pastes from command line (i.e. using curl)
 
-(These features were added by me and not Cesura. All issues regarding them should be directed to myself.)
+**Note:** These features were added by me and not Cesura. All issues regarding them should be directed to myself.
+If he chooses to incorporate these features into the main repo, I will delete this repo and re-fork.
 
 ## Screenshots
 ### Browser
